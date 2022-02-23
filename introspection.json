@@ -611,8 +611,8 @@
         "fields": null,
         "inputFields": [
           {
-            "name": "firstName",
-            "description": "Given name.",
+            "name": "fullName",
+            "description": "Full name.",
             "type": {
               "kind": "SCALAR",
               "name": "String",
@@ -1090,7 +1090,7 @@
             "deprecationReason": null
           },
           {
-            "name": "firstName",
+            "name": "fullName",
             "description": null,
             "args": [],
             "type": {
@@ -1480,8 +1480,8 @@
         "fields": null,
         "inputFields": [
           {
-            "name": "firstName",
-            "description": "Given name.",
+            "name": "fullName",
+            "description": "Full name.",
             "type": {
               "kind": "SCALAR",
               "name": "String",
@@ -16750,8 +16750,8 @@
             "deprecationReason": null
           },
           {
-            "name": "firstName",
-            "description": "Given name.",
+            "name": "fullName",
+            "description": "Full name.",
             "type": {
               "kind": "SCALAR",
               "name": "String",
@@ -66088,8 +66088,8 @@
         "fields": null,
         "inputFields": [
           {
-            "name": "firstName",
-            "description": "Given name.",
+            "name": "fullName",
+            "description": "Full name.",
             "type": {
               "kind": "SCALAR",
               "name": "String",
@@ -66808,8 +66808,8 @@
         "fields": null,
         "inputFields": [
           {
-            "name": "firstName",
-            "description": "Given name.",
+            "name": "fullName",
+            "description": "Full name.",
             "type": {
               "kind": "SCALAR",
               "name": "String",
@@ -68421,7 +68421,7 @@
             "deprecationReason": null
           },
           {
-            "name": "firstName",
+            "name": "fullName",
             "description": null,
             "args": [],
             "type": {
@@ -69264,8 +69264,8 @@
             "deprecationReason": null
           },
           {
-            "name": "firstName",
-            "description": "Given name.",
+            "name": "fullName",
+            "description": "Full name.",
             "type": {
               "kind": "SCALAR",
               "name": "String",

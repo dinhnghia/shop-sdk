@@ -35,14 +35,12 @@ const testRefreshTokenOnDelayedExampleRequests = async (
   // Make another requests
   const firstUpdateAccountPromise = saleor.user.updateAccount({
     input: {
-      firstName: state?.user?.firstName,
-      lastName: state?.user?.lastName,
+      fullName: state?.user?.fullName,
     },
   });
   const secondUpdateAccountPromise = saleor.user.updateAccount({
     input: {
-      firstName: state?.user?.firstName,
-      lastName: state?.user?.lastName,
+      fullName: state?.user?.fullName,
     },
   });
 
@@ -213,8 +211,7 @@ describe("auth api auto token refresh", () => {
     // Make another requests
     const updateAccount = await saleor.user.updateAccount({
       input: {
-        firstName: state?.user?.firstName,
-        lastName: state?.user?.lastName,
+        fullName: state?.user?.fullName,
       },
     });
 
@@ -256,8 +253,7 @@ describe("auth api auto token refresh", () => {
     // Make another requests
     const updateAccount = await saleor.user.updateAccount({
       input: {
-        firstName: state?.user?.firstName,
-        lastName: state?.user?.lastName,
+        fullName: state?.user?.fullName,
       },
     });
 

@@ -15,8 +15,7 @@ const verifyToken = () =>
       user: {
         id: "VXNlcjoxMDMz",
         email: TEST_AUTH_EMAIL,
-        firstName: "",
-        lastName: "",
+        fullName: "",
         isStaff: true,
         metadata: [],
         addresses: [],

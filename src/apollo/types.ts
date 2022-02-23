@@ -133,8 +133,8 @@ export type AccountErrorCode =
   | 'MISSING_CHANNEL_SLUG';
 
 export type AccountInput = {
-  /** Given name. */
-  firstName?: Maybe<Scalars['String']>;
+  /** Full name. */
+  fullName?: Maybe<Scalars['String']>;
   /** Family name. */
   lastName?: Maybe<Scalars['String']>;
   /** Billing address of the customer. */
@@ -198,7 +198,7 @@ export type AccountUpdate = {
 export type Address = Node & {
   /** The ID of the object. */
   id: Scalars['ID'];
-  firstName: Scalars['String'];
+  fullName: Scalars['String'];
   lastName: Scalars['String'];
   companyName: Scalars['String'];
   streetAddress1: Scalars['String'];
@@ -237,8 +237,8 @@ export type AddressDelete = {
 };
 
 export type AddressInput = {
-  /** Given name. */
-  firstName?: Maybe<Scalars['String']>;
+  /** Full name. */
+  fullName?: Maybe<Scalars['String']>;
   /** Family name. */
   lastName?: Maybe<Scalars['String']>;
   /** Company or organization. */
@@ -2456,8 +2456,8 @@ export type CustomerInput = {
   defaultBillingAddress?: Maybe<AddressInput>;
   /** Shipping address of the customer. */
   defaultShippingAddress?: Maybe<AddressInput>;
-  /** Given name. */
-  firstName?: Maybe<Scalars['String']>;
+  /** Full name. */
+  fullName?: Maybe<Scalars['String']>;
   /** Family name. */
   lastName?: Maybe<Scalars['String']>;
   /** The unique email address of the user. */
@@ -10055,8 +10055,8 @@ export type StaffCreate = {
 };
 
 export type StaffCreateInput = {
-  /** Given name. */
-  firstName?: Maybe<Scalars['String']>;
+  /** Full name. */
+  fullName?: Maybe<Scalars['String']>;
   /** Family name. */
   lastName?: Maybe<Scalars['String']>;
   /** The unique email address of the user. */
@@ -10156,8 +10156,8 @@ export type StaffUpdate = {
 };
 
 export type StaffUpdateInput = {
-  /** Given name. */
-  firstName?: Maybe<Scalars['String']>;
+  /** Full name. */
+  fullName?: Maybe<Scalars['String']>;
   /** Family name. */
   lastName?: Maybe<Scalars['String']>;
   /** The unique email address of the user. */
@@ -10400,7 +10400,7 @@ export type User = Node & ObjectWithMetadata & {
   id: Scalars['ID'];
   lastLogin: Maybe<Scalars['DateTime']>;
   email: Scalars['String'];
-  firstName: Scalars['String'];
+  fullName: Scalars['String'];
   lastName: Scalars['String'];
   isStaff: Scalars['Boolean'];
   isActive: Scalars['Boolean'];
@@ -10524,8 +10524,8 @@ export type UserCreateInput = {
   defaultBillingAddress?: Maybe<AddressInput>;
   /** Shipping address of the customer. */
   defaultShippingAddress?: Maybe<AddressInput>;
-  /** Given name. */
-  firstName?: Maybe<Scalars['String']>;
+  /** Full name. */
+  fullName?: Maybe<Scalars['String']>;
   /** Family name. */
   lastName?: Maybe<Scalars['String']>;
   /** The unique email address of the user. */
@@ -11286,12 +11286,12 @@ export type _Service = {
 export type AccountErrorFragment = Pick<AccountError, 'code' | 'field' | 'message'>;
 
 export type AddressFragment = (
-  Pick<Address, 'id' | 'firstName' | 'lastName' | 'companyName' | 'streetAddress1' | 'streetAddress2' | 'city' | 'cityArea' | 'postalCode' | 'countryArea' | 'phone' | 'isDefaultBillingAddress' | 'isDefaultShippingAddress'>
+  Pick<Address, 'id' | 'fullName' | 'companyName' | 'streetAddress1' | 'streetAddress2' | 'city' | 'cityArea' | 'postalCode' | 'countryArea' | 'phone' | 'isDefaultBillingAddress' | 'isDefaultShippingAddress'>
   & { country: Pick<CountryDisplay, 'code' | 'country'> }
 );
 
 export type UserFragment = (
-  Pick<User, 'id' | 'email' | 'firstName' | 'lastName' | 'isStaff'>
+  Pick<User, 'id' | 'email' | 'fullName' | 'isStaff'>
   & { metadata: Array<Maybe<Pick<MetadataItem, 'key' | 'value'>>>, defaultShippingAddress: Maybe<AddressFragment>, defaultBillingAddress: Maybe<AddressFragment>, addresses: Maybe<Array<Maybe<AddressFragment>>> }
 );
 
