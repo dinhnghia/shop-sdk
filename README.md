@@ -69,7 +69,7 @@ const App = () => {
   };
 
   if (authenticated && user) {
-    return <span>Signed in as {user.firstName}</span>;
+    return <span>Signed in as {user.fullName}</span>;
   }
 
   return <button onClick={handleSignIn}>Sign in</button>;

@@ -17,8 +17,7 @@ const login = (tokenExpirationPeriodInSeconds?: number, email?: string) =>
       user: {
         id: "VXNlcjoxMDMz",
         email: email,
-        firstName: "",
-        lastName: "",
+        fullName: "",
         isStaff: true,
         metadata: [],
         addresses: [],

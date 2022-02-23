@@ -11,8 +11,7 @@ describe("user api", () => {
   const saleor = setupSaleorClient();
 
   const testAddress = {
-    firstName: "Test name",
-    lastName: "Test lastname",
+    fullName: "Test full name",
     streetAddress1: "Test street address",
     city: "Test city",
     postalCode: "12-345",
@@ -57,10 +56,10 @@ describe("user api", () => {
   it("updates the user first name", async () => {
     const { data } = await saleor.user.updateAccount({
       input: {
-        firstName: "",
+        fullName: "",
       },
     });
-    expect(data?.accountUpdate?.user?.firstName).toBe("");
+    expect(data?.accountUpdate?.user?.fullName).toBe("");
     expect(data?.accountUpdate?.errors).toHaveLength(0);
   });
 
@@ -73,7 +72,7 @@ describe("user api", () => {
       expect(
         data?.accountAddressCreate?.user?.addresses[
           data?.accountAddressCreate?.user?.addresses?.length - 1
-        ]?.firstName === testAddress.firstName
+        ]?.fullName === testAddress.fullName
       );
     }
     expect(data?.accountAddressCreate?.errors).toHaveLength(0);
@@ -92,15 +91,15 @@ describe("user api", () => {
         id: addressId,
         input: {
           ...testAddress,
-          firstName: newTestName,
+          fullName: newTestName,
         },
       });
       const state = saleor.getState();
       if (data?.accountAddressUpdate?.user?.addresses?.length) {
         expect(
-          data?.accountAddressUpdate?.user?.addresses[index]?.firstName
+          data?.accountAddressUpdate?.user?.addresses[index]?.fullName
         ).toBe(newTestName);
-        expect(state?.user?.addresses?.[index]?.firstName).toBe(newTestName);
+        expect(state?.user?.addresses?.[index]?.fullName).toBe(newTestName);
       }
       expect(data?.accountAddressUpdate?.errors).toHaveLength(0);
     }

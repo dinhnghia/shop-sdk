@@ -11,8 +11,7 @@ export const accountErrorFragment = gql`
 export const addressFragment = gql`
   fragment AddressFragment on Address {
     id
-    firstName
-    lastName
+    fullName
     companyName
     streetAddress1
     streetAddress2
@@ -35,8 +34,7 @@ export const userFragment = gql`
   fragment UserFragment on User {
     id
     email
-    firstName
-    lastName
+    fullName
     isStaff
     metadata {
       key

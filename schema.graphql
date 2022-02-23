@@ -73,8 +73,7 @@ enum AccountErrorCode {
 }
 
 input AccountInput {
-  firstName: String
-  lastName: String
+  fullName: String
   defaultBillingAddress: AddressInput
   defaultShippingAddress: AddressInput
   languageCode: LanguageCodeEnum
@@ -115,8 +114,7 @@ type AccountUpdate {
 
 type Address implements Node {
   id: ID!
-  firstName: String!
-  lastName: String!
+  fullName: String!
   companyName: String!
   streetAddress1: String!
   streetAddress2: String!
@@ -145,8 +143,7 @@ type AddressDelete {
 }
 
 input AddressInput {
-  firstName: String
-  lastName: String
+  fullName: String
   companyName: String
   streetAddress1: String
   streetAddress2: String
@@ -1673,8 +1670,7 @@ input CustomerFilterInput {
 input CustomerInput {
   defaultBillingAddress: AddressInput
   defaultShippingAddress: AddressInput
-  firstName: String
-  lastName: String
+  fullName: String
   email: String
   isActive: Boolean
   note: String
@@ -5353,8 +5349,7 @@ type StaffCreate {
 }
 
 input StaffCreateInput {
-  firstName: String
-  lastName: String
+  fullName: String
   email: String
   isActive: Boolean
   note: String
@@ -5421,8 +5416,7 @@ type StaffUpdate {
 }
 
 input StaffUpdateInput {
-  firstName: String
-  lastName: String
+  fullName: String
   email: String
   isActive: Boolean
   note: String
@@ -5607,8 +5601,7 @@ type User implements Node & ObjectWithMetadata {
   id: ID!
   lastLogin: DateTime
   email: String!
-  firstName: String!
-  lastName: String!
+  fullName: String!
   isStaff: Boolean!
   isActive: Boolean!
   note: String
@@ -5663,8 +5656,7 @@ type UserCountableEdge {
 input UserCreateInput {
   defaultBillingAddress: AddressInput
   defaultShippingAddress: AddressInput
-  firstName: String
-  lastName: String
+  fullName: String
   email: String
   isActive: Boolean
   note: String

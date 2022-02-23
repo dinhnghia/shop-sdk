@@ -26,8 +26,7 @@ const externalObtainAccessTokens = (
       user: {
         id: "VXNlcjoxMDMz",
         email: email,
-        firstName: "",
-        lastName: "",
+        fullName: "",
         isStaff: true,
         metadata: [],
         addresses: [],
