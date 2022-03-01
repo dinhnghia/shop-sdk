@@ -15,7 +15,10 @@ export const addressFragment = gql`
     companyName
     streetAddress1
     streetAddress2
-    city
+    city {
+      id
+      name
+    }
     cityArea
     postalCode
     country {
