@@ -118,13 +118,11 @@ type Address implements Node {
   id: ID!
   fullName: String!
   companyName: String!
-  streetAddress1: String!
-  streetAddress2: String!
+  address: String!
   city: City
-  cityArea: String!
-  postalCode: String!
+  district: District
+  ward: Ward
   country: CountryDisplay!
-  countryArea: String!
   phone: String
   isDefaultShippingAddress: Boolean
   isDefaultBillingAddress: Boolean

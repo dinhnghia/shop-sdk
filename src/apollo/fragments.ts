@@ -13,19 +13,23 @@ export const addressFragment = gql`
     id
     fullName
     companyName
-    streetAddress1
-    streetAddress2
+    address
     city {
       id
       name
     }
-    cityArea
-    postalCode
+    district {
+      id
+      name
+    }
+    ward {
+      id
+      name
+    }
     country {
       code
       country
     }
-    countryArea
     phone
     isDefaultBillingAddress
     isDefaultShippingAddress
