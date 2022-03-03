@@ -1128,23 +1128,7 @@
             "deprecationReason": null
           },
           {
-            "name": "streetAddress1",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "streetAddress2",
+            "name": "address",
             "description": null,
             "args": [],
             "type": {
@@ -1172,33 +1156,25 @@
             "deprecationReason": null
           },
           {
-            "name": "cityArea",
+            "name": "district",
             "description": null,
             "args": [],
             "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
+              "kind": "OBJECT",
+              "name": "District",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "postalCode",
+            "name": "ward",
             "description": null,
             "args": [],
             "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              }
+              "kind": "OBJECT",
+              "name": "Ward",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -1213,22 +1189,6 @@
               "ofType": {
                 "kind": "OBJECT",
                 "name": "CountryDisplay",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "countryArea",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "String",
                 "ofType": null
               }
             },
